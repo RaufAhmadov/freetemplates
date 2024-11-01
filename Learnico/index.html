@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Шрифты с CSS файлом должны подключаться раньше основных СТИЛЕЙ-->
+    <link rel="stylesheet" href="Fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- AWARD START-->
+    <div class="award">
+        <p class="award_p">Create Award Winning Websites In Webflow</p> 
+        <div class="award_button">
+            <img class="award_img" src="img/close.svg" alt="button X img">
+        </div>
+    </div>
+    <!-- AWARD END-->
+
+    <!-- HEADER START-->
+    <header class="header">
+        <div class="wrapp">
+            <div></div>
+            <nav class="header_nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Contacts</a>
+                <a href="#">Courses</a>
+            </nav>
+            <div class="header_cart">
+                <div class="header_menu">
+                    <img src="img/search.svg" alt="search button">
+                    <a href="#">Search</a>
+                </div>
+                <div class="header_menu">
+                    <img src="img/shopping_cart.svg" alt="shopping cart">
+                    <a href="#">Cart</a>
+                </div>
+                <button class="header_btn">Sing in</button>
+            </div>  
+        </div>
+    </header>
+    <!-- HEADER END-->
+
+    <!-- MAIN START-->
+    <main class="main">
+        <!-- CONTENT START-->
+        <section class="section">
+            <div class="container">
+                <div class="content">
+                    <div class="content_info">
+                        <h1 class="content_h1">Become an No-Code expert and find a job</h1>
+                        <p class="content_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel molestie magna curabitur tincidunt nunc sit amet.</p>
+                        <div class="content_button">
+                            <button class="content_btn1">Explore Course</button>
+                            <button id="content_btn2">
+                                <p>Watch Video</p>
+                                <img src="img/play.svg" alt="play">
+                            </button>
+                        </div>
+                        <div class="review">
+                            <div class="review_images">
+                                <div class="review_img">
+                                    <img src="img/photo1.png" alt="pht1">
+                                </div>
+                                <div class="review_img">
+                                    <img src="img/photo2.png" alt="pht2">
+                                </div>
+                                <div class="review_img">
+                                    <img src="img/photo3.png" alt="pht3">
+                                </div>
+                                <div class="review_img">
+                                    <img src="img/photo4.png" alt="pht4">
+                                </div>
+                                <div class="review_img">
+                                    <img src="img/photo5.png" alt="pht5">
+                                </div>
+                            </div>
+                            <div class="review_raiting">
+                                <div class="review_star">
+                                    <i class ="icon-star-full"></i>
+                                    <i class ="icon-star-full"></i>
+                                    <i class ="icon-star-full"></i>
+                                    <i class ="icon-star-full"></i>
+                                    <i class ="icon-star-half"></i>
+                                </div>
+                                <p>From 3k+ reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_video">
+                        <!-- Если добавить видео с помошью HTML тогда к тегу Video нужно добавить эти атрубуты autoplay, muted и тогда видео будет воспроизводиться при открытии сайта-->
+                        <!-- Атрибут poster добавляет кортинку как постер к видео-->
+                        <!-- Для добавления кнопки play к видео нужно добавить атрибут controls-->
+                        <video id="content_watch" src="movie/dev.mp4" poster="img/frame.png"></video>
+                        <img class="content_video_bg" src="img/absolute-img.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTENT END-->
+
+        <p class="main_title">Trusted by the worlds best companies</p>
+
+        <!-- ABOUT START-->
+        <div class="about_bg">
+            <div class="container">
+                <section class="about">
+                    <a class="about_btn" href="#">About US</a>
+                    <h2 class="about_h2">No-code Education Platform</h2>
+                    <p class="about_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                    </p>
+                    <a class="about_link" href="#">About US</a>
+                </section>
+            </div>
+        </div>
+        <!-- ABOUT END-->
+
+        <!-- PREMIUM START-->
+
+        <div class="about_bg">
+            <div class="container">
+                <div class="premium">
+                    <div class="premium_bg"></div>
+                    <div class="premium_text">
+                        <h3 class="premium_h3">Premium courses from the industry leaders</h3>
+                        <p class="premium_p">Lorem ipsum sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                        <div class="premium_click">
+                            <a href="#" class="premium_link" target="_blank">Get started</a>
+                            <button class="premium_btn">
+                                <span class="premium_span1">Learn more</span>
+                                <span class="premium_span2">&gt;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="premium premium2">
+                    <div class="premium_bg premium_bg2"></div>
+                    <div class="premium_text">
+                        <h3 class="premium_h3">Easily find the perfect course for you</h3>
+                        <p class="premium_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                        <div class="premium_click">
+                            <a href="#" class="premium_link" target="_blank">Get started</a>
+                            <button class="premium_btn">
+                                <span class="premium_span1">Learn more</span>
+                                <span class="premium_span2">&gt;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREMIUM END-->
+
+        <!-- POPULAR START-->
+
+        <div class="about_bg">
+            <div class="container">
+                <section class="popular">
+                    <div class="popular_content">
+                        <a href="#" target="_blank" class="popular_link">Traiding</a>
+                        <h5 class="popular_h5">The most popular courses</h5>
+                        <p class="popular_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                    </div>
+                    <div class="popular_cards">
+                        <div class="popular_card">
+                            <div class="popular_card_wrap">
+                                <a href="#" target="_blank" class="popular_click">Beginner</a>
+                                <span class="popular_webflow">Webflow Basics</span>
+                                <span class="popular_money">$ 24.00 USD</span>
+                            </div>
+                            <button class="popular_btn">Enroll Course</button>
+                            <div class="popular_img">
+                                <img src="/img/popular1.png" alt="pop1">
+                            </div>
+                        </div>
+                        <div class="popular_card">
+                            <div class="popular_card_wrap">
+                                <a href="#" target="_blank" class="popular_click">Beginner</a>
+                                <span class="popular_webflow">Webflow Interactions Masterclass</span>
+                                <span class="popular_money">$ 55.00 USD</span>
+                            </div>
+                            <button class="popular_btn">Enroll Course</button>
+                            <div class="popular_img">
+                                <img src="/img/popular2.png" alt="pop2">
+                            </div>
+                        </div>
+                        <div class="popular_card">
+                            <div class="popular_card_wrap">
+                                <a href="#" target="_blank" class="popular_click">Beginner</a>
+                                <span class="popular_webflow">Advanced CMS and Integrations</span>
+                                <span class="popular_money">$ 38.00 USD</span>
+                            </div>
+                            <button class="popular_btn">Enroll Course</button>
+                            <div class="popular_img">
+                                <img src="/img/popular3.png" alt="pop3">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- POPULAR END-->
+
+        <!-- STUDENT START-->
+
+        <div class="about_bg">
+            <div class="container">
+                <section class="student">
+                    <div class="student_wrapp">
+                        <div class="student_text">
+                            <a href="#" target="_blank" class="student_link">Join us</a>
+                            <h3>Join more than 17,000+ students all over the world</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                            <a target="_blank" href="#" class="student_btn">Get started</a>
+                        </div>
+                        <div class="student_bg"></div>
+                    </div>
+                    <div class="learn">
+                        <div class="learn_card">
+                            <div class="learn_card_img">
+                                <img src="/img/people_alt.svg" alt="people-icon">
+                            </div>
+                            <h5>Browse our courses</h5>
+                            <p class="learn_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
+                        </div>
+                        <div class="learn_card">
+                            <div class="learn_card_img">
+                                <img src="/img/shield.svg" alt="shield-icon">
+                            </div>
+                            <h5>Purchase quickly and securely</h5>
+                            <p class="learn_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
+                        </div>
+                        <div class="learn_card">
+                            <div class="learn_card_img">
+                                <img src="/img/school.svg" alt="school-icon">
+                            </div>
+                            <h5>Start learning right away</h5>
+                            <p class="learn_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- STUDENT END-->
+
+        <!-- TEACHERS START-->
+
+        <div class="about_bg">
+            <div class="container">
+                <div class="teachers_blog">
+                    <div class="teacher">
+                        <a target="_blank" href="#" class="teachers_link">Benefits</a>
+                        <h2 class="teachers_title">Grow your knowledge from best teachers in the industry</h2>
+                        <p class="teachers_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                    </div>
+                    <div class="teacher_wrapp">
+                        <div class="teacher_left">
+                            <div class="over1">
+                                <div class="teacher_icon">
+                                    <img src="/img/book.svg" alt="teachers">
+                                </div>
+                                <span class="teachers_info">Over 430+ hours of lessons</span>
+                                <p class="teachers_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            </div>
+                            <div class="over2">
+                                <div class="teacher_icon">
+                                    <img src="/img/teachers.svg" alt="teachers">
+                                </div>
+                                <span class="teachers_info">40+ teachers</span>
+                                <p class="teachers_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            </div>
+                        </div>
+
+                        <div class="teacher_center">
+                            <img src="/img/laptop.png" alt="teacher_center_bg">
+                        </div>
+                        
+                        <div class="teacher_right">
+                            <div class="over1">
+                                <div class="teacher_icon">
+                                    <img src="/img/smile.svg" alt="teachers">
+                                </div>
+                                <span class="teachers_info">Online community</span>
+                                <p class="teachers_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            </div>
+                            <div class="over2">
+                                <div class="teacher_icon">
+                                    <img src="/img/person.svg" alt="teachers">
+                                </div>
+                                <span class="teachers_info">1-on-1 coaching</span>
+                                <p class="teachers_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            </div>
+                        </div>
+                        <div class="teacher_btn">
+                            <a class="teacher_link">Get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TEACHERS END-->
+    </main>
+    <!-- MAIN END-->
+</body>
+</html>  
