@@ -295,7 +295,7 @@ body {
 }
 
 .premium_bg {
-    background-image: url('/img/contframe1.png');
+    background-image: url('/Learnico/img/contframe1.png');
     background-position: center; /* Позиционирования фото по центру ДИВа*/
     background-repeat: no-repeat; /*Остановка повторения фотографии*/
     background-size: cover; /* Чтобы фото растягивался во весь ДИВ*/
@@ -305,7 +305,7 @@ body {
 }
 
 .premium_bg2{
-    background-image: url('/img/contframe2.png');
+    background-image: url('/Learnico/img/contframe2.png');
     background-position: center; /* Позиционирования фото по центру ДИВа*/
     background-repeat: no-repeat; /*Остановка повторения фотографии*/
     background-size: cover; /* Чтобы фото растягивался во весь ДИВ*/
@@ -631,8 +631,8 @@ body {
 }
 
 .teacher_left, .teacher_right {
-    width: 336px;
-    min-height: 525px;
+    width: auto;
+    height: auto;
     margin: 60px;
 }
 
@@ -677,8 +677,8 @@ body {
 
 
 .teacher_center{
-    width: 505px;
-    height: 600px;
+    width: 45%;
+    height: auto;
 }
 
 .teacher_center img{
@@ -687,10 +687,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    object-fit: contain;
 }
 
 .teacher_btn{
-    margin: 80px auto 0 auto;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
 }
 
 .teacher_link{
