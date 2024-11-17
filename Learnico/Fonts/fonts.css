@@ -31,3 +31,7 @@
 .icon-star-full:before {
   content: "\e9d9";
 }
+
+.icon-star-full_black:before {
+  content: "\e9d9";
+}
