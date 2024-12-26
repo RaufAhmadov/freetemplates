@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Randomizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        input, textarea, button {
+            font-size: 1em;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e65c55;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #28a745;
+        }
+        .countdown {
+            font-size: 1.8em;
+            color: #dc3545;
+        }
+        #game {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ff6f61;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Secret Santa Randomizer</h1>
+    <p>Enter the company name:</p>
+    <input type="text" id="company" placeholder="Company name">
+    <br><br>
+    <p>Enter employee names (one per line):</p>
+    <textarea id="names" rows="10" cols="30" placeholder="Example: John (one per line)"></textarea>
+    <br><br>
+    <button onclick="initializeGame()">Start the game</button>
+    <div id="game" style="display: none;">
+        <h2>The game has started!</h2>
+        <p>Each participant must press the button to receive a name.</p>
+        <button onclick="drawName()">Get a name</button>
+        <div id="participantResult" class="result"></div>
+        <div id="countdown" class="countdown"></div>
+    </div>
+
+    <script>
+        let remainingNames = [];
+
+        function initializeGame() {
+            const company = document.getElementById('company').value.trim();
+            const namesText = document.getElementById('names').value.trim();
+
+            if (!company) {
+                alert('Please enter the company name!');
+                return;
+            }
+
+            if (!namesText) {
+                alert('Please enter at least two names!');
+                return;
+            }
+
+            remainingNames = namesText.split('\n').map(name => name.trim()).filter(Boolean);
+
+            if (remainingNames.length < 2) {
+                alert('At least two participants are required for the game.');
+                return;
+            }
+
+            if (remainingNames.length % 2 !== 0) {
+                alert('The number of participants must be even.');
+                return;
+            }
+
+            document.getElementById('game').style.display = 'block';
+            document.getElementById('participantResult').innerHTML = '';
+            document.getElementById('countdown').innerHTML = '';
+        }
+
+        function drawName() {
+            if (remainingNames.length === 0) {
+                alert('All names have already been drawn.');
+                return;
+            }
+
+            const index = Math.floor(Math.random() * remainingNames.length);
+            const name = remainingNames.splice(index, 1)[0];
+
+            const resultElement = document.getElementById('participantResult');
+            const countdownElement = document.getElementById('countdown');
+
+            let countdown = 5;
+            countdownElement.textContent = `Name will disappear in: ${countdown}`;
+
+            const interval = setInterval(() => {
+                countdown--;
+                if (countdown > 0) {
+                    countdownElement.textContent = `Name will disappear in: ${countdown}`;
+                } else {
+                    clearInterval(interval);
+                    countdownElement.textContent = '';
+                    resultElement.innerHTML = '';
+                }
+            }, 1000);
+
+            resultElement.innerHTML = `Your Secret Santa: <strong>${name}</strong>`;
+        }
+    </script>
+</body>
+</html>
