@@ -115,7 +115,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/HTML/foodwagon/assets/img/photo/header_bg2.png);
+    background-image: url(/FoodWagon/assets/img/photo/header_bg2.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
