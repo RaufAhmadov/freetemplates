@@ -230,6 +230,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
     height: auto;
@@ -315,6 +316,7 @@ nav{
     justify-items: center;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 .about_order_cards {
@@ -358,6 +360,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 5rem 0;
     gap: 1rem;
 }
@@ -534,6 +537,7 @@ nav{
 .search_by_name {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     padding: 5rem 0 7.5rem 0;
 }
@@ -667,6 +671,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     flex-wrap: wrap;
     background-color: rgba(254, 239, 208, 1);
 }
@@ -675,8 +680,11 @@ nav{
     height: auto;
 }
 .phone img{
-    width: 100%;
+    width: 30%;
     height: auto;
+    position: absolute;
+    left: 340px;
+    bottom: 0px;
 }
 .download_app {
     width: 30%;
@@ -727,20 +735,67 @@ nav{
 /* DETAILS SECTIONS */
 
 .details {
-    display: flex;
+}
+
+.details_wrap{
+    background-color: red;
+
+}
+
+.detail_cards {
+    display: flex;  
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 1.5rem;
+    box-shadow: 0 0 10px 5px rgba(255, 174, 0, 0.29);
+    border-radius: 10px;
+    background-color: #fff;
+    width: 70%;
 }
-.detail_cards {
+
+.detail_info{
+    height: auto;
 }
-.detail_cads_img {
+.detail_info h3{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 48px;
+    width: 70%;
+    margin-bottom: 20px;
+}
+.details_desc {
+    width: 60%;
+    margin-bottom: 40px;
+}
+.details_btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 21px 48px;
+    background: linear-gradient(to right, rgba(255, 186, 38, 1) 50%, rgba(255, 154, 14, 1) 100%);
+    border-radius: 0.9rem;
+    border: none;
+    color: #fff;
+    box-shadow: 0 0 10px 5px rgba(255, 174, 0, 0.29);
+    text-align: center;
 }
-.details_desc {
+
+.details_btn:hover{
+    background: linear-gradient(to left, rgba(255, 186, 38, 1) 50%, rgba(255, 154, 14, 1) 100%);
+    transition: 1s;
 }
-.cetails_btn {
+
+.detail_img{
+    height: auto;
+}
+
+.detail_img img{
+    width: 50%;
+    height: 50%;
 }
